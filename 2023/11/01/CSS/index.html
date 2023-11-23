@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>前端面试题   CSS篇 - azhi</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="1.img的title和alt区别title是鼠标移动...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/cz.png" type="image/png" sizes="16x16">
+  
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">前端面试题   CSS篇</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="">azhi</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">前端面试题   CSS篇</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 01, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>6971</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="1-img的title和alt区别"><a href="#1-img的title和alt区别" class="headerlink" title="1.img的title和alt区别"></a>1.img的title和alt区别</h1><pre><code>title是鼠标移动到元素上显示图片的信息，alt是图片加载视频或没加载显示的文字
+</code></pre>
+<h1 id="2-怎么用web前端开发移动端应用"><a href="#2-怎么用web前端开发移动端应用" class="headerlink" title="2.怎么用web前端开发移动端应用"></a>2.怎么用web前端开发移动端应用</h1><pre><code>媒体查询响应式设计，flex，弹性盒子，流试布局，rem自适应
+</code></pre>
+<h1 id="3-flutter和其他移动端框架的区别"><a href="#3-flutter和其他移动端框架的区别" class="headerlink" title="3.flutter和其他移动端框架的区别"></a>3.flutter和其他移动端框架的区别</h1><pre><code>本质上是一套跨平台的UI框架，实现了一套代码跨多端运行
+</code></pre>
+<h1 id="4-前端代码为什么要打包"><a href="#4-前端代码为什么要打包" class="headerlink" title="4.前端代码为什么要打包"></a>4.前端代码为什么要打包</h1><pre><code>模块化开发中，我们会编写大量模块，如果不打包就进行上线，那么页面加载或交互时，将会发起大量的请求。
+为了性能优化，需要使用 webpack 这样的打包器对模块进行打包整合，以减少请求数
+</code></pre>
+<h1 id="5-什么是-nodejs，怎么实现一台电脑里有多个-nodejs-版本"><a href="#5-什么是-nodejs，怎么实现一台电脑里有多个-nodejs-版本" class="headerlink" title="5.什么是 nodejs，怎么实现一台电脑里有多个 nodejs 版本"></a>5.什么是 nodejs，怎么实现一台电脑里有多个 nodejs 版本</h1><pre><code>Node.js 只是一个让 JavaScript 运行在浏览器之外的平台
+nvm,nvm 则是提供切换 node 版本的工具。
+</code></pre>
+<h1 id="6-响应式布局应该注意的点"><a href="#6-响应式布局应该注意的点" class="headerlink" title="6.响应式布局应该注意的点"></a>6.响应式布局应该注意的点</h1><pre><code>头部添加 meta：
+头部添加 link，不同屏幕分辨率使用不同的 css 样式：
+各个模块尺寸尽量使用百分比。
+(1)设置 viewport 元标签
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0, user-scalable=no&quot;&gt;
+(2)避免使用绝对单位(px)，用相对单位代替(%、auto、em 等)
+(3)使用流式定位：float
+(4)图片大小实现自适应：
+img &#123; max-width: 100%; &#125;
+会随着容器的改变而改变，且不会超过图片自身原始大小，防止失真。
+(5)根据浏览器屏幕的特征，有选择性的执行某些 CSS 样式——CSS3 媒体查询技术(Media Query)
+</code></pre>
+<h1 id="7-CSS-选择符、优先级算法以及内联和-important-哪个优先级高？"><a href="#7-CSS-选择符、优先级算法以及内联和-important-哪个优先级高？" class="headerlink" title="7.CSS 选择符、优先级算法以及内联和 important 哪个优先级高？"></a>7.CSS 选择符、优先级算法以及内联和 important 哪个优先级高？</h1><pre><code>css 继承特性主要是指文本方面的继承，盒模型相关的属性基本没有继承特性。
+所有元素可继承：
+visibility 和 cursor
+块级元素可继承
+text-indent 和 text-align
+内联元素可继承的：
+letter-spacing
+word-spacing
+white-space
+line-height
+color
+font
+font-family
+font-size
+font-style
+font-variant
+font-weight
+text-decoration
+text-transform
+direction
+优先级为!important &gt; [ id &gt; class &gt; tag ]
+!Important 比 内联优先级高
+</code></pre>
+<h1 id="8-css的引入方法有哪些？link-和-import-的区别是"><a href="#8-css的引入方法有哪些？link-和-import-的区别是" class="headerlink" title="8.css的引入方法有哪些？link 和@import 的区别是?"></a>8.css的引入方法有哪些？link 和@import 的区别是?</h1><pre><code>内嵌
+行内
+外链
+区别 1：link 是 XHTML 标签，除了加载 CSS 外，还可以定义 RSS 等其他事务；@import 属于 CSS 范畴，
+只能加载 CSS。
+区别 2：link 引用 CSS 时，在页面载入时同时加载；@import 需要页面网页完全载入以后加载。
+区别 3：link 是 XHTML 标签，无兼容问题；@import 兼容 IE5 以上
+区别 4：link 支持使用 Javascript 控制 DOM 去改变样式；而@import 不支持改变样
+</code></pre>
+<h1 id="9-DOCTYPE-作用？严格模式混杂模式的区别？有什么意义？"><a href="#9-DOCTYPE-作用？严格模式混杂模式的区别？有什么意义？" class="headerlink" title="9.DOCTYPE 作用？严格模式混杂模式的区别？有什么意义？"></a>9.DOCTYPE 作用？严格模式混杂模式的区别？有什么意义？</h1><pre><code>如果在文档开始处没有发现文档类型声明，则所有浏览器都会默认开启混杂模式。
+1.&lt;!DOCTYPE&gt;声名位于文档的最前面，在&lt;HTML&gt; 标签的前面，告知浏览器以何种模式来渲染文档。 
+2.严格模式的排版和 JS 运作模式都是以浏览器支持的最高的标准运行。按照 W3C 的标准来解析代码。 
+3.混杂模式是以宽松的，向后兼容的方式来解析代码。是指浏览器用自己的方式解析代码，模拟老式
+浏览器的行为以防止网站停止工作。 
+4.若 DOCTYPE 为声名或格式不正确，页面将会以怪异模式的方式解析。
+5.Doctype 标签可声明三种 DLD 类型，分别是严格型，过渡型，框架型。
+</code></pre>
+<h1 id="10-如何居中一个浮动元素"><a href="#10-如何居中一个浮动元素" class="headerlink" title="10.如何居中一个浮动元素"></a>10.如何居中一个浮动元素</h1><pre><code>用定位 position
+</code></pre>
+<h1 id="11-box-sizing-常用属性有那些，分别有什么作用"><a href="#11-box-sizing-常用属性有那些，分别有什么作用" class="headerlink" title="11.box-sizing 常用属性有那些，分别有什么作用"></a>11.box-sizing 常用属性有那些，分别有什么作用</h1><p>content-box：标准盒模型，又叫做 W3C盒模型，一般在现代浏览器中使用的都是这个盒模型<br>border-box：怪异盒模型，低版本IE浏览器中的盒模型<br>    box-sizing ： content-box || border-box || inherit<br>    1、content-box:此值为其默认值，其让元素维持 W3C 的标准 Box Model，也就是说元素的宽度&#x2F;高度（width&#x2F;height）等于元素边框宽度（border）加上元素内边距（padding）加上元素内容宽度&#x2F;高度（content width&#x2F;height）即：Element Width&#x2F;Height &#x3D; border+padding+content width&#x2F;height。<br>    2、border-box:此值让元素维持 IE 传统的 Box Model（IE6 以下版本），也就是说元素的宽度&#x2F;高度等于元素内容的宽度&#x2F;高度。（从上面 Box Model 介绍可知，我们这里的 content width&#x2F;height 包含了元素的 border,padding,内容的 width&#x2F;height【此处的内容宽度&#x2F;高度&#x3D;width&#x2F;height-border-padding】）。</p>
+<h1 id="12-css-选择器权重优先级"><a href="#12-css-选择器权重优先级" class="headerlink" title="12.css 选择器权重优先级"></a>12.css 选择器权重优先级</h1><pre><code>import&gt;内联&gt;id&gt;类&gt;标签&gt;通配符&gt;继承&gt;浏览器默认
+！important（仅可直接选中）：使得优先级最大
+</code></pre>
+<h1 id="13-如何禁止页面缩放"><a href="#13-如何禁止页面缩放" class="headerlink" title="13.如何禁止页面缩放"></a>13.如何禁止页面缩放</h1><pre><code>在 html 中，可以使用 user-scalabel（s盖嘞包） 属性设置禁止页面缩放，只需要
+在 mate 元素中添加“user-scalabel=0”样式即可
+</code></pre>
+<h1 id="14-空元素有那些？"><a href="#14-空元素有那些？" class="headerlink" title="14.空元素有那些？"></a>14.空元素有那些？</h1><pre><code>在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。所有自封闭的 html 标签
+在 HTML 中有以下这些空元素：
+&lt;br&gt;
+&lt;hr&gt;
+&lt;img&gt;
+&lt;input&gt;
+&lt;link&gt;
+&lt;meta&gt;
+</code></pre>
+<h1 id="15-html5-的新标签"><a href="#15-html5-的新标签" class="headerlink" title="15.html5 的新标签"></a>15.html5 的新标签</h1><pre><code>article、footer、header、nav、section、video、audio
+</code></pre>
+<h1 id="写出html常用的标签-行内元素有哪些？-块级元素有哪些？css盒模型？"><a href="#写出html常用的标签-行内元素有哪些？-块级元素有哪些？css盒模型？" class="headerlink" title="写出html常用的标签 行内元素有哪些？ 块级元素有哪些？css盒模型？"></a>写出html常用的标签 行内元素有哪些？ 块级元素有哪些？css盒模型？</h1><p>  行内元素：span，i，a，img，button<br>  块级元素：div，p，ul，li，form<br>  盒模型：content，padding，border，margin</p>
+<h1 id="标准盒模型和怪异盒模型的区别？"><a href="#标准盒模型和怪异盒模型的区别？" class="headerlink" title="标准盒模型和怪异盒模型的区别？"></a>标准盒模型和怪异盒模型的区别？</h1><p>  宽度和高度的计算方式不同<br>  标准盒模型：<br>    width &#x3D; content-width<br>    height &#x3D; content-height<br>  怪异盒模型:<br>    width &#x3D; content-width + padding-width + border-width<br>    height &#x3D; content-height + padding-height + border-height</p>
+<h1 id="css3的新特性？"><a href="#css3的新特性？" class="headerlink" title="css3的新特性？"></a>css3的新特性？</h1><p>  阴影：box-shadow<br>  圆角：border-radius<br>  边框图片：border-image<br>  渐变：webkit-linear-gradient<br>  动画：animation</p>
+<h1 id="当页面显示内容超出显示区域是有哪些解决方法"><a href="#当页面显示内容超出显示区域是有哪些解决方法" class="headerlink" title="当页面显示内容超出显示区域是有哪些解决方法?"></a>当页面显示内容超出显示区域是有哪些解决方法?</h1><p>  overflow：hidden</p>
+<h1 id="src和herf的区别"><a href="#src和herf的区别" class="headerlink" title="src和herf的区别"></a>src和herf的区别</h1><p>  src：用来链接图片地址的<br>  herf：超文本引用，链接url地址</p>
+<h1 id="css如何实现阴影"><a href="#css如何实现阴影" class="headerlink" title="css如何实现阴影"></a>css如何实现阴影</h1><p>  box-shadow：水平阴影，垂直阴影，范围，颜色</p>
+<h1 id="17-css-伪类和伪元素"><a href="#17-css-伪类和伪元素" class="headerlink" title="17.css 伪类和伪元素"></a>17.css 伪类和伪元素</h1><pre><code>常见的状态伪类
+:link 应用于未被访问过的链接；  
+:hover 应用于鼠标悬停到的元素；
+:active （唉可题污）应用于被激活的元素；
+:visited （v丝得的）应用于被访问过的链接，与:link 互斥。
+:focus 应用于拥有键盘输入焦点的元素。
+常见的结构性伪类
+:first-child 选择某个元素的第一个子元素；  
+:last-child 选择某个元素的最后一个子元素；
+:nth-child() 选择某个元素的一个或多个特定的子元素；
+常见的伪元素选择器：
+::before 在元素内容的最前面添加新内容。
+::after 在元素内容的最后面添加新内容。
+</code></pre>
+<h1 id="18-清除浮动"><a href="#18-清除浮动" class="headerlink" title="18.清除浮动"></a>18.清除浮动</h1><pre><code>1.额外标签法（在最后一个浮动标签后，新加一个标签，给其设置 clear： both ；）（不推荐） 
+2.父级添加 overflow 属性（父元素添加 overflow:hidden）（不推荐） 
+3.使用 after 伪元素清除浮动（推荐使用）
+</code></pre>
+<h1 id="19-html5-如何嵌入音频，h5-的媒体标签"><a href="#19-html5-如何嵌入音频，h5-的媒体标签" class="headerlink" title="19.html5 如何嵌入音频，h5 的媒体标签"></a>19.html5 如何嵌入音频，h5 的媒体标签</h1><pre><code>&lt;audio src=&quot;xxx.mp3&quot; id=&quot;myAudio&quot;&gt;Audio player not available.&lt;/audio&gt;
+音频： &lt;audio&gt;
+视频： &lt;video&gt;
+</code></pre>
+<h1 id="20-H5-新增-API"><a href="#20-H5-新增-API" class="headerlink" title="20. H5 新增 API"></a>20. H5 新增 API</h1><pre><code>地理定位：navigator（耐v给的）. geolocation（g熬了给深）
+拖拽和释放 拖拽：Drag（拽哥） 释放：Drop （抓破）
+Web 存储 sessionStorage 约 5M、localStorage 约 20M
+</code></pre>
+<h1 id="21-position-的值有那些"><a href="#21-position-的值有那些" class="headerlink" title="21.position 的值有那些"></a>21.position 的值有那些</h1><pre><code>默认值： static
+绝对定位：absolute 相对于最近一个有定位的父元素偏移，若其父元素没有定位则逐层上找，
+直到 document——页面文档对象
+相对定位：relative相对于自身原本位置进行偏移
+固定定位：fixed 相对于浏览器窗口进行定位
+粘性定位：sticky 该定位基于用户滚动的位置
+</code></pre>
+<h1 id="22-html5-应用程序缓存和浏览器缓存区别"><a href="#22-html5-应用程序缓存和浏览器缓存区别" class="headerlink" title="22.html5 应用程序缓存和浏览器缓存区别"></a>22.html5 应用程序缓存和浏览器缓存区别</h1><pre><code>HTML5 的应用缓存最关键的就是支持离线应用，可获取少数或者全部网站内容，包括
+HTML、CSS、图像和 JavaScript 脚本并存在本地。该特性加速了网站的性能，可通过如下方式实现：
+&lt;!doctype html&gt;
+&lt;html manifest=&quot;example.appcache&quot;&gt;
+.....
+&lt;/html&gt;
+与传统的浏览器缓存比较，该特性并不强制要求用户访问网站。
+离线浏览--用户可在离线时使用它们。
+速度--已经缓存的资源加载得更快。
+减少服务器负载--浏览器只从服务器下载更改过的资源。
+</code></pre>
+<h1 id="23-HTML5-的离线储存怎么使用，工作原理能不能解释一下？"><a href="#23-HTML5-的离线储存怎么使用，工作原理能不能解释一下？" class="headerlink" title="23.HTML5 的离线储存怎么使用，工作原理能不能解释一下？"></a>23.HTML5 的离线储存怎么使用，工作原理能不能解释一下？</h1><pre><code>原理：HTML5 的离线存储是基于一个新建的.appcache (app卡吃) 文件的缓存机制(不是存储技术)，通过这个
+文件上的解析清单离线存储资源，这些资源就会像 cookie 一样被存储了下来。之后当网络在处于离线状态下时，浏
+览器会通过被离线存储的数据进行页面展示
+如何使用：
+页面头部像下面一样加入一个 manifest（满耐返丝特） 的属性；
+在 cache.manifest 文件的编写离线存储的资源
+在离线状态时，操作 window.applicationCache 进行需求实现
+CACHE MANIFEST
+#v0.11
+CACHE:
+js/app.js
+css/style.css
+NETWORK:
+resourse/logo.png
+FALLBACK:
+/offline.html
+</code></pre>
+<h1 id="24-HTML5canvans-是什么"><a href="#24-HTML5canvans-是什么" class="headerlink" title="24.HTML5canvans 是什么"></a>24.HTML5canvans 是什么</h1><pre><code>​ canvas是HTML5提供的一个用于展示绘图效果的标签，“&lt;canvas&gt;”标签提供了一个空白的图形区域（矩形区域的画布），
+需要使用特定的JavaScript API来绘画图形。
+</code></pre>
+<h1 id="25-HTML-5-中不同的新表单元素类型是什么？"><a href="#25-HTML-5-中不同的新表单元素类型是什么？" class="headerlink" title="25.HTML 5 中不同的新表单元素类型是什么？"></a>25.HTML 5 中不同的新表单元素类型是什么？</h1><pre><code>当的type属性设置为email，在提交表单时，会自动验证email域的值是否符合email的标准格式，再也不用
+自己用正则表达式去写email的格式验证了。
+当的type属性设置为url，在提交表单时，会自动验证url域的值是否符合url的标准格式。
+当的type属性设置为number时，会自动检验输入内容是否为数字类型，您还能够设定该输入框数字的限定。
+range 类型用于应该包含一定范围内数字值的输入域。range 类型显示为滑动条。您还能够设定对所接受的数字的限定。
+search类型用于搜索字段，比如站点搜索或 Google 搜索（搜索字段的表现类似常规文本字段）。
+当的type属性设置为color，会自动检验输入内容是否为颜色格式。
+当的type属性设置为tel，会自动检验输入内容是否为电话号码格式。
+</code></pre>
+<h1 id="26-HTML5-的输出元素"><a href="#26-HTML5-的输出元素" class="headerlink" title="26.HTML5 的输出元素"></a>26.HTML5 的输出元素</h1><pre><code>html5 的&lt;output&gt;标签可以定义不同类型的输出。
+&lt;output&gt;标签的属性：
+for 定义输出字段相关的一个或多个元素。
+form 定义输入字段所属的一个或多个表单。
+name 定义对象的唯一名称（表单提交时使用）。、
+</code></pre>
+<h1 id="27-移动端适配怎么做的"><a href="#27-移动端适配怎么做的" class="headerlink" title="27.移动端适配怎么做的"></a>27.移动端适配怎么做的</h1><pre><code>1、设置理想窗口 meta viewport
+2、媒体查询，使用@media 查询，可以针对不同的媒体类型定义不同的样式。
+3、动态 rem 方案(手机专用自适应方案)
+</code></pre>
+<h1 id="28-CSS-Sprites-是什么，谈谈这个技术的优缺点"><a href="#28-CSS-Sprites-是什么，谈谈这个技术的优缺点" class="headerlink" title="28.CSS Sprites 是什么，谈谈这个技术的优缺点"></a>28.CSS Sprites 是什么，谈谈这个技术的优缺点</h1><pre><code>精灵图
+CSS Sprites 是一种网页图片应用处理方式，就是把网页中一些背景图片整合到一张图片文件中，再利用
+CSS “background-image”，“background- repeat”，“background-position”的组合进行背景定位。
+减少网页的 http 请求，提高性能，这也是 CSS Sprites 最大的优点，也是其被广泛传播和应用的主要原因；
+减少图片的字节：多张图片合并成 1 张图片的字节小于多张图片的字节总和；
+减少了命名困扰：只需对一张集合的图片命名，不需要对每一个小元素进行命名提高制作效率；
+更换风格方便：只需要在一张或少张图片上修改图片的颜色或样式，整个网页的风格就可以改变，维护起来更加方便。
+图片合成比较麻烦；
+背景设置时，需要得到每一个背景单元的精确位置，；
+维护合成图片时，最好只是往下加图片，而不要更改已有图片。
+</code></pre>
+<h1 id="29-margin-重叠问题解决"><a href="#29-margin-重叠问题解决" class="headerlink" title="29.margin 重叠问题解决"></a>29.margin 重叠问题解决</h1><pre><code># BFC作用
+  - 对于父子元素 margin 重叠，内层元素设为 BFC
+  - 对于兄弟元素 margin 重叠，都设为 bfc
+  - 清除浮动
+  - 防止文字环绕 
+</code></pre>
+<h1 id="30-如何创建-BFC"><a href="#30-如何创建-BFC" class="headerlink" title="30.如何创建 BFC"></a>30.如何创建 BFC</h1><pre><code>  float 属性的值不为 none
+  position 属性的值为 absolute 或者 fixed
+  display 为 inline-block，以及 table 相关的属性，例如 table-caption，table-row 等
+  overflow 属性值不为 visible
+  display 属性值为 flex ，grid ，inline-flex ，inline-grid
+# 什么是BFC
+    bfc是块级格式化，独立的渲染区域。就是独立的div盒子里面的变化不会影响外面的变化
+</code></pre>
+<h1 id="31-display-none-与-visibility：hidden（v日包了得）"><a href="#31-display-none-与-visibility：hidden（v日包了得）" class="headerlink" title="31.display:none 与 visibility：hidden（v日包了得）"></a>31.display:none 与 visibility：hidden（v日包了得）</h1><pre><code>display：none：会让元素从渲染树中消失，渲染的时候不占据任何空间；
+visibility：hidden：不会让元素从渲染树中消失，渲染的时候任然占据空间，只是内容不可见。
+display: none：是非继承属性，子孙节点消失是由于元素从渲染树中消失造成的，通过修改子孙节点的属性无法显示；
+visibility: hidden：是继承属性，子孙节点消失是由于继承了 hidden，通过设置 visibility：visible（v日包），
+可以让子孙节点显示。
+display：none 隐藏产生的 reflow 和 repaint（回流与重绘），而 visibility：hidden 没有这个影响前端性能的问题。
+</code></pre>
+<h1 id="32-怎么让-Chrome-支持小于-12px-的文字？"><a href="#32-怎么让-Chrome-支持小于-12px-的文字？" class="headerlink" title="32.怎么让 Chrome 支持小于 12px 的文字？"></a>32.怎么让 Chrome 支持小于 12px 的文字？</h1><pre><code>针对谷歌浏览器内核，加 webkit 前缀，用 transform:scale()这个属性进行缩放！
+</code></pre>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/11/01/CSS/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;01&#x2F;CSS&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;01&#x2F;CSS&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2023/11/02/JS/"><i class="iconfont iconleft"></i>前端面试题   JS篇</a>
+    <a></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-img%E7%9A%84title%E5%92%8Calt%E5%8C%BA%E5%88%AB"><span class="toc-text">1.img的title和alt区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%80%8E%E4%B9%88%E7%94%A8web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8"><span class="toc-text">2.怎么用web前端开发移动端应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-flutter%E5%92%8C%E5%85%B6%E4%BB%96%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">3.flutter和其他移动端框架的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%89%93%E5%8C%85"><span class="toc-text">4.前端代码为什么要打包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E4%BB%80%E4%B9%88%E6%98%AF-nodejs%EF%BC%8C%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E9%87%8C%E6%9C%89%E5%A4%9A%E4%B8%AA-nodejs-%E7%89%88%E6%9C%AC"><span class="toc-text">5.什么是 nodejs，怎么实现一台电脑里有多个 nodejs 版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%BA%94%E8%AF%A5%E6%B3%A8%E6%84%8F%E7%9A%84%E7%82%B9"><span class="toc-text">6.响应式布局应该注意的点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-CSS-%E9%80%89%E6%8B%A9%E7%AC%A6%E3%80%81%E4%BC%98%E5%85%88%E7%BA%A7%E7%AE%97%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%86%85%E8%81%94%E5%92%8C-important-%E5%93%AA%E4%B8%AA%E4%BC%98%E5%85%88%E7%BA%A7%E9%AB%98%EF%BC%9F"><span class="toc-text">7.CSS 选择符、优先级算法以及内联和 important 哪个优先级高？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-css%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9Flink-%E5%92%8C-import-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF"><span class="toc-text">8.css的引入方法有哪些？link 和@import 的区别是?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-DOCTYPE-%E4%BD%9C%E7%94%A8%EF%BC%9F%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E6%B7%B7%E6%9D%82%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E6%84%8F%E4%B9%89%EF%BC%9F"><span class="toc-text">9.DOCTYPE 作用？严格模式混杂模式的区别？有什么意义？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-%E5%A6%82%E4%BD%95%E5%B1%85%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0"><span class="toc-text">10.如何居中一个浮动元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-box-sizing-%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E6%9C%89%E9%82%A3%E4%BA%9B%EF%BC%8C%E5%88%86%E5%88%AB%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="toc-text">11.box-sizing 常用属性有那些，分别有什么作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-css-%E9%80%89%E6%8B%A9%E5%99%A8%E6%9D%83%E9%87%8D%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">12.css 选择器权重优先级</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13-%E5%A6%82%E4%BD%95%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E7%BC%A9%E6%94%BE"><span class="toc-text">13.如何禁止页面缩放</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#14-%E7%A9%BA%E5%85%83%E7%B4%A0%E6%9C%89%E9%82%A3%E4%BA%9B%EF%BC%9F"><span class="toc-text">14.空元素有那些？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#15-html5-%E7%9A%84%E6%96%B0%E6%A0%87%E7%AD%BE"><span class="toc-text">15.html5 的新标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%87%BAhtml%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%87%E7%AD%BE-%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F-%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9Fcss%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%9F"><span class="toc-text">写出html常用的标签 行内元素有哪些？ 块级元素有哪些？css盒模型？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">标准盒模型和怪异盒模型的区别？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#css3%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9F"><span class="toc-text">css3的新特性？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BD%93%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%86%85%E5%AE%B9%E8%B6%85%E5%87%BA%E6%98%BE%E7%A4%BA%E5%8C%BA%E5%9F%9F%E6%98%AF%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">当页面显示内容超出显示区域是有哪些解决方法?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#src%E5%92%8Cherf%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">src和herf的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#css%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%98%B4%E5%BD%B1"><span class="toc-text">css如何实现阴影</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#17-css-%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="toc-text">17.css 伪类和伪元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#18-%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="toc-text">18.清除浮动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#19-html5-%E5%A6%82%E4%BD%95%E5%B5%8C%E5%85%A5%E9%9F%B3%E9%A2%91%EF%BC%8Ch5-%E7%9A%84%E5%AA%92%E4%BD%93%E6%A0%87%E7%AD%BE"><span class="toc-text">19.html5 如何嵌入音频，h5 的媒体标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#20-H5-%E6%96%B0%E5%A2%9E-API"><span class="toc-text">20. H5 新增 API</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#21-position-%E7%9A%84%E5%80%BC%E6%9C%89%E9%82%A3%E4%BA%9B"><span class="toc-text">21.position 的值有那些</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#22-html5-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E5%92%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E5%8C%BA%E5%88%AB"><span class="toc-text">22.html5 应用程序缓存和浏览器缓存区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#23-HTML5-%E7%9A%84%E7%A6%BB%E7%BA%BF%E5%82%A8%E5%AD%98%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%EF%BC%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E8%83%BD%E4%B8%8D%E8%83%BD%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%EF%BC%9F"><span class="toc-text">23.HTML5 的离线储存怎么使用，工作原理能不能解释一下？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#24-HTML5canvans-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">24.HTML5canvans 是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#25-HTML-5-%E4%B8%AD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%96%B0%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">25.HTML 5 中不同的新表单元素类型是什么？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#26-HTML5-%E7%9A%84%E8%BE%93%E5%87%BA%E5%85%83%E7%B4%A0"><span class="toc-text">26.HTML5 的输出元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#27-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%80%8E%E4%B9%88%E5%81%9A%E7%9A%84"><span class="toc-text">27.移动端适配怎么做的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#28-CSS-Sprites-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E8%B0%88%E8%B0%88%E8%BF%99%E4%B8%AA%E6%8A%80%E6%9C%AF%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-text">28.CSS Sprites 是什么，谈谈这个技术的优缺点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#29-margin-%E9%87%8D%E5%8F%A0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-text">29.margin 重叠问题解决</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#30-%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA-BFC"><span class="toc-text">30.如何创建 BFC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#31-display-none-%E4%B8%8E-visibility%EF%BC%9Ahidden%EF%BC%88v%E6%97%A5%E5%8C%85%E4%BA%86%E5%BE%97%EF%BC%89"><span class="toc-text">31.display:none 与 visibility：hidden（v日包了得）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#32-%E6%80%8E%E4%B9%88%E8%AE%A9-Chrome-%E6%94%AF%E6%8C%81%E5%B0%8F%E4%BA%8E-12px-%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%9F"><span class="toc-text">32.怎么让 Chrome 支持小于 12px 的文字？</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=3068206598 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://github.com/little-zhi "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:3068206598@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="">azhi</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
